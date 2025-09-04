@@ -57,7 +57,7 @@ async def update_news():
         with open(last_news_id_filename, 'w') as fp:
             fp.write(str(news_id))
 
-        await asyncio.sleep(1)
+        await asyncio.sleep(5)
 
 
 async def main():
