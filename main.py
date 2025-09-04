@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-data_filename = '.data'
+last_news_id_filename = '.data/last_news_id'
 last_news_id = 0
-with open(data_filename, 'a+') as fp:
+with open(last_news_id_filename, 'a+') as fp:
     fp.seek(0)
     fetched_id = fp.read()
     if not fetched_id.isdecimal():
@@ -54,7 +54,7 @@ async def update_news():
                                            f'{vos_host}/news/{news_id}')
 
         last_news_id = news_id
-        with open(data_filename, 'w') as fp:
+        with open(last_news_id_filename, 'w') as fp:
             fp.write(str(news_id))
 
         await asyncio.sleep(1)
