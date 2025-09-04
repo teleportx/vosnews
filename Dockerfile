@@ -7,7 +7,7 @@ COPY ./.env .env
 
 COPY ./main.py main.py
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 WORKDIR /app
 CMD ["python", "main.py"]
