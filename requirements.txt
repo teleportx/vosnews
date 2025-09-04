@@ -3,3 +3,4 @@ aiogram==3.22.0
 bs4==0.0.2
 beautifulsoup4==4.13.5
 lxml==6.0.1
+python-dotenv==1.1.1

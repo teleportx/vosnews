@@ -5,7 +5,9 @@ import aiohttp
 from aiogram import Bot
 from aiogram.client.default import DefaultBotProperties
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 
+load_dotenv()
 
 data_filename = '.data'
 last_news_id = 0
